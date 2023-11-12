@@ -3,7 +3,7 @@
     include('../models/consultas.php');
     include('../models/ejecutarConsultas.php');
 
-    $resultados = obtenerDatos(consultaGeneral());
+    $resultados = obtenerDatos($conn, consultaGeneral());
 
 ?>
 <!DOCTYPE html>

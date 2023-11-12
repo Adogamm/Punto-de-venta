@@ -1,20 +1,4 @@
 <?php
-
-    function catClientes() {
-        $strSql = 'SELECT * FROM CLIENTES';
-        return $strSql;
-    }
-
-    function catVehiculos() {
-        $strSql = 'SELECT * FROM VEHICULOS';
-        return $strSql;
-    }
-
-    function catReparaciones() {
-        $sqlStr = 'SELECT * FROM REPARACIONES';
-        return $sqlStr;
-    }
-
     function consultaGeneral() {
         $strSql = 'SELECT c.NOMBRE,c.TELEFONO, CONCAT(v.MARCA, " ", v.MODELO) as COCHE,
         r.COSTO_TOTAL, r.COSTO_PENDIENTE, r.DESCRIPCION AS REPARACION, r.FECHA_REPARACION, r.CON_FACTURA

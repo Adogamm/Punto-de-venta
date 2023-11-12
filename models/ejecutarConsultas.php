@@ -10,8 +10,7 @@
         }
     }
 
-    function obtenerDatos($sql) {
-        global $conn;
+    function obtenerDatos($conn, $sql) {
         $stmt = $conn->prepare($sql);
         if (!$stmt) {
             echo "Error en la preparación de la consulta: " . $conn->error;
@@ -22,9 +21,5 @@
         $data = $result->fetch_all(MYSQLI_ASSOC);
         $stmt->close();
         return $data;
-
-    // function obtenerDatos($sql) {
-    //     $stmt = ejecutarConsulta($sql);
-    //     return $stmt->fetchAll(PDO::FETCH_ASSOC);
-     }
+    }
 ?>
