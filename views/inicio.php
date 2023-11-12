@@ -29,9 +29,9 @@
                 <table id="myTable" class="display table table-striped text-center">
                     <thead>
                         <tr>
+                            <th>Fecha de reparación</th>    
                             <th>Nombre</th>
                             <th>Vehiculo</th>
-                            <th>Fecha de reparación</th>
                             <th>Costo</th>
                             <th>Reparación</th>
                             <th>Factura</th>
@@ -40,9 +40,9 @@
                     </thead>
                     <tfoot>
                         <tr>
+                            <th>Fecha de reparación</th>    
                             <th>Nombre</th>
                             <th>Vehiculo</th>
-                            <th>Fecha de reparación</th>
                             <th>Costo</th>
                             <th>Reparación</th>
                             <th>Factura</th>
@@ -53,9 +53,9 @@
                     <tbody>
                     <?php foreach($resultados as $fila) { ?>
                         <tr>
+                            <td> <?php echo $fila['FECHA_REPARACION']; ?> </td>    
                             <td> <?php echo $fila['NOMBRE']; ?> </td>
                             <td> <?php echo $fila['COCHE']; ?> </td>
-                            <td> <?php echo $fila['FECHA_REPARACION']; ?> </td>
                             <td> <?php echo $fila['COSTO_TOTAL']; ?> </td>
                             <td> <?php echo $fila['REPARACION']; ?> </td>
                             <td> <?php echo $fila['CON_FACTURA']; ?> </td>
