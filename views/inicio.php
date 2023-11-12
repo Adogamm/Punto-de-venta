@@ -1,3 +1,11 @@
+<?php
+    include('../models/connection.php');
+    include('../models/consultas.php');
+    include('../models/ejecutarConsultas.php');
+
+    $resultados = obtenerDatos(consultaGeneral());
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -25,6 +33,7 @@
                             <th>Vehiculo</th>
                             <th>Fecha de reparación</th>
                             <th>Costo</th>
+                            <th>Reparación</th>
                             <th>Factura</th>
                             <th>Telefono del cliente</th>
                         </tr>
@@ -35,28 +44,24 @@
                             <th>Vehiculo</th>
                             <th>Fecha de reparación</th>
                             <th>Costo</th>
+                            <th>Reparación</th>
                             <th>Factura</th>
-                            <th>Factura</th>
+                            <th>Telefono</th>
                         </tr>
                     </tfoot>
 
                     <tbody>
+                    <?php foreach($resultados as $fila) { ?>
                         <tr>
-                            <td>Jose Perez</td>
-                            <td>Chevrolet Cruize</td>
-                            <td>2023/01/01</td>
-                            <td>$300.00</td>
-                            <td>-</td>
-                            <td>7751231223</td>
+                            <td> <?php echo $fila['NOMBRE']; ?> </td>
+                            <td> <?php echo $fila['COCHE']; ?> </td>
+                            <td> <?php echo $fila['FECHA_REPARACION']; ?> </td>
+                            <td> <?php echo $fila['COSTO_TOTAL']; ?> </td>
+                            <td> <?php echo $fila['REPARACION']; ?> </td>
+                            <td> <?php echo $fila['CON_FACTURA']; ?> </td>
+                            <td> <?php echo $fila['TELEFONO']; ?> </td>
                         </tr>
-                        <tr>
-                            <td>Jose Perez</td>
-                            <td>Chevrolet Cruize</td>
-                            <td>2023/01/01</td>
-                            <td>$300.00</td>
-                            <td>-</td>
-                            <td>7751231223</td>
-                        </tr>
+                    <?php } ?>
                     </tbody>
                 </table>
             </div>
@@ -65,6 +70,7 @@
 
     <script src="../scripts/dataTables.js"></script>
     <script src="../scripts/navbarScript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
