@@ -35,6 +35,7 @@ $resultados = $vehiculosRepository->catClientes();
                                     <th>Modelo</th>
                                     <th>Color</th>
                                     <th>Placas</th>
+                                    <th>Dueño</th>
                                 </tr>
                             </thead>
                             <tfoot>
@@ -43,6 +44,7 @@ $resultados = $vehiculosRepository->catClientes();
                                     <th>Modelo</th>
                                     <th>Color</th>
                                     <th>Placas</th>
+                                    <th>Dueño</th>
                                 </tr>
                             </tfoot>
 
@@ -60,6 +62,9 @@ $resultados = $vehiculosRepository->catClientes();
                                     </td>
                                     <td>
                                         <?php echo $fila['PLACAS']; ?>
+                                    </td>
+                                    <td>
+                                        <?php echo $fila['NOMBRE']; ?>
                                     </td>
                                 </tr>
                                 <?php } ?>

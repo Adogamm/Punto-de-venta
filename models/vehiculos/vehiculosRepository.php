@@ -10,7 +10,8 @@
         }
     
         public function catClientes() {
-            $strSql = "SELECT * FROM VEHICULOS";
+            $strSql = "SELECT v.*,c.NOMBRE FROM VEHICULOS AS v
+                LEFT JOIN CLIENTES AS c ON c.ID_CLIENTE = v.ID_CLIENTE";
             return obtenerDatos($this->conn, $strSql);
         }
     }
