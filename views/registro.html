@@ -22,17 +22,17 @@
                         <h4 class="text-center">Registro de trabajo realizado</h4>
                     </div>
                     <div class="card-body">
-                        <form action="#" method="post">
+                        <form action="../models/registro.php" method="post">
                             <div class="container">
                                 <div class="row">
                                     <h5 class="text-center">Cliente</h5>
                                     <div class="col-lg-6">
                                         <label for="nombre cliente" class="">Nombre del cliente</label>
-                                        <input type="text" class="form-control" id="nombre">
+                                        <input type="text" class="form-control" id="nombre" name="nombre">
                                     </div>
                                     <div class="col-lg-6">
                                         <label for="nombre cliente" class="">Número de telefono</label>
-                                        <input type="text" class="form-control" id="telefono">
+                                        <input type="text" class="form-control" id="telefono" name="telefono">
                                     </div>
                                 </div>
                                 <hr>
@@ -40,19 +40,19 @@
                                     <h5 class="text-center">Vehiculo</h5>
                                     <div class="col-lg-4">
                                         <label for="marca" class="">Marca</label>
-                                        <input type="text" class="form-control" id="marca">
+                                        <input type="text" class="form-control" id="marca" name="marca">
                                     </div>
                                     <div class="col-lg-4">
                                         <label for="modelo" class="">Modelo</label>
-                                        <input type="text" class="form-control" id="modelo">
+                                        <input type="text" class="form-control" id="modelo" name="modelo">
                                     </div>
                                     <div class="col-lg-4">
                                         <label for="placas" class="">Placas</label>
-                                        <input type="text" class="form-control" id="placas">
+                                        <input type="text" class="form-control" id="placas" name="placas">
                                     </div>
                                     <div class="col-lg-12">
                                         <label for="color" class="">Color</label>
-                                        <input type="text" class="form-control" id="color">
+                                        <input type="text" class="form-control" id="color" name="color">
                                     </div>
                                 </div>
                                 <hr>
@@ -60,21 +60,21 @@
                                     <h5 class="text-center">Reparación</h5>
                                     <div class="col-lg-4">
                                         <label for="descripcion" class="">Descripcion</label>
-                                        <input type="text" class="form-control" id="descripcion">
+                                        <input type="text" class="form-control" id="descripcion" name="descripcion">
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label for="con factura">Con factura</label>
-                                            <select class="form-control" id="factura">
-                                              <option value="no">No</option>
-                                              <option value="si">Si</option>
+                                            <select class="form-control" id="factura" name="factura">
+                                                <option value="no">No</option>
+                                                <option value="si">Si</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <label for="costo">Pago(s)</label>
-                                            <select class="form-control" id="costo">
+                                            <select class="form-control" id="costo" name="costo">
                                                 <option value="completo">Completo</option>
                                                 <option value="parcial">Parcial</option>
                                             </select>
@@ -82,12 +82,12 @@
                                     </div>
                                     <div class="col-lg-12" id="contenedorCosto">
                                         <label for="costo-total" class="">Costo total</label>
-                                        <input type="number" class="form-control" id="costo-total">
+                                        <input type="text" pattern="[0-9]+(\.[0-9]+)?" class="form-control" id="costo-total" name="costo-total">
                                     </div>
                                     <div class="col-lg-6" id="contenedorParcial">
                                         <div id="inputParcial" style="display: none;">
                                             <label for="costoParcial">A cuenta:</label>
-                                            <input type="number" class="form-control" id="costoParcial">
+                                            <input type="number" class="form-control" id="costoParcial" name="costoParcial">
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
