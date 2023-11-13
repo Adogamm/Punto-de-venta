@@ -7,4 +7,8 @@
         LEFT JOIN REPARACIONES AS r ON v.ID_VEHICULO = r.ID_VEHICULO WHERE r.ID_REPARACION IS NOT NULL;';
         return $strSql;
     }
+
+    function registrarTrabajo() {
+        $strSql = '';
+    }
 ?>
