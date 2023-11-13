@@ -26,8 +26,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 mt-5">
-                <div class="card">
-                    <div class="card-body">
+                <div class="card shadow">
+                    <div class="card-body shadow">
                         <table id="myTable" class="display table table-striped text-center">
                             <thead>
                                 <tr>
